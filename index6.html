@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      <span id="hour">0</span>:<span id="minute">0</span>:<span id="second"
+        >0</span
+      >
+    </p>
+    <script>
+      let second = 0;
+      let minute = 0;
+      let hour = 0;
+      function addSecond() {
+        second++;
+        if (second == 60) {
+          minute++;
+          second = 0;
+        }
+        if (minute == 60) {
+          hour++;
+          minute = 0;
+        }
+        document.getElementById("second").innerText =(second < 10) ? `0${second}` : second;
+        document.getElementById("minute").innerText = minute;
+        document.getElementById("hour").innerText = hour;
+      }
+
+    setInterval(addSecond,10);
+    </script>
+  </body>
+</html>

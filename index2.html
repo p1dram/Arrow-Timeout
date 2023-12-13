@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="goStep(1)" id="btnStep1">step1</button>
+    <button onclick="goStep(2)" id="btnStep2">step2</button>
+    <button onclick="goStep(3)" id="btnStep3">step3</button>
+
+    <div id="detailstep1" style="display: none;">step1</div>
+    <div id="detailstep2" style="display: none;">step2</div>
+    <div id="detailstep3" style="display: none;">step3</div>
+   
+    <script>
+      let step = 1;
+      function goStep(num) {
+        if (num == 1) {
+          document.getElementById("detailstep1").style.display = "block";
+          document.getElementById("detailstep2").style.display = "none";
+          document.getElementById("detailstep3").style.display = "none";
+          document.getElementById("btnStep1").style.backgroundColor = "darkblue";
+          document.getElementById("btnStep1").style.color = "white";
+          document.getElementById("btnStep2").style.backgroundColor = "gray";
+          document.getElementById("btnStep2").style.color = "white";
+          document.getElementById("btnStep3").style.backgroundColor = "gray";
+          document.getElementById("btnStep3").style.color = "white";
+        }
+        else if (num==2){
+            document.getElementById("detailstep1").style.display = "none";
+          document.getElementById("detailstep2").style.display = "block";
+          document.getElementById("detailstep3").style.display = "none";
+          document.getElementById("btnStep1").style.backgroundColor = "green";
+          document.getElementById("btnStep1").style.color = "white";
+          document.getElementById("btnStep2").style.backgroundColor = "darkblue";
+          document.getElementById("btnStep2").style.color = "white";
+          document.getElementById("btnStep3").style.backgroundColor = "gray";
+          document.getElementById("btnStep3").style.color = "white";
+        }
+        else if (num==3){
+            document.getElementById("detailstep1").style.display = "none";
+          document.getElementById("detailstep2").style.display = "none";
+          document.getElementById("detailstep3").style.display = "block";
+          document.getElementById("btnStep1").style.backgroundColor = "green";
+          document.getElementById("btnStep1").style.color = "white";
+          document.getElementById("btnStep2").style.backgroundColor = "green";
+          document.getElementById("btnStep2").style.color = "white";
+          document.getElementById("btnStep3").style.backgroundColor = "darkblue";
+          document.getElementById("btnStep3").style.color = "white";
+        }
+      }
+
+     
+    </script>
+  </body>
+</html>

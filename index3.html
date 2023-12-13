@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="   http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+    />
+    <style>
+      .pointer {
+        border: 2px solid black;
+        border-radius: 50%;
+        width: 90px;
+        height: 90px;
+        display: inline-block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: darkblue;
+      }
+    </style>
+  </head>
+
+  <body onkeydown="keyDownFn(event)">
+    <span class="pointer">
+      <p style="text-align: center; color: white; font-size: 20px">
+        puedes ayudame <i class="ion-help"></i>
+      </p>
+    </span>
+    <script>
+      let topPosition = 0;
+      let leftPosition = 0;
+      let keyDownFn = (e) => {
+        console.log(e.key);
+        if (e.key == "ArrowDown") {
+          topPosition += 10;
+        } else if (e.key == "ArrowUp") {
+          topPosition -= 10;
+        } else if (e.key == "ArrowRight") {
+          leftPosition += 10;
+        } else if (e.key == "ArrowLeft") {
+          leftPosition -= 10;
+        }
+        document.querySelector(".pointer").style.top = `${topPosition}px`;
+        document.querySelector(".pointer").style.left = `${leftPosition}px`;
+      };
+    </script>
+  </body>
+</html>
